@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ballroom Cohost Directives</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ── COVER PAGE ─────────────────────────────────────────── */
+    .cover {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    /* ── WATERMARK ──────────────────────────────────────────── */
+    .watermark {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 160px;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* ── TITLE PAGE ─────────────────────────────────────────── */
+    .title-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      border-top: 1px solid #222;
+    }
+
+    .title-page h1 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .title-page .subtitle {
+      color: #aaa;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    /* ── CONTENT ────────────────────────────────────────────── */
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 48px;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    /* ── HEADINGS ───────────────────────────────────────────── */
+    h2.article {
+      color: #8EE05C;
+      font-size: 22px;
+      font-weight: 700;
+      margin: 48px 0 16px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #333;
+    }
+
+    h3.chapter {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      margin: 40px 0 4px;
+    }
+
+    .index-subtitle {
+      color: #888;
+      font-size: 13px;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+
+    /* ── LAWS ───────────────────────────────────────────────── */
+    .law {
+      margin: 10px 0;
+      padding-left: 0;
+    }
+
+    .law-id {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .law-label {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    b, strong {
+      font-weight: 700;
+    }
+
+    /* ── SECTION HEADERS ────────────────────────────────────── */
+    .section-group {
+      color: #888;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 24px 0 8px;
+    }
+
+    /* ── LISTS ──────────────────────────────────────────────── */
+    ul.law-list {
+      list-style: none;
+      padding-left: 16px;
+      margin: 6px 0 10px;
+    }
+
+    ul.law-list li::before {
+      content: "• ";
+      color: #8EE05C;
+    }
+
+    ol.law-list {
+      padding-left: 28px;
+      margin: 6px 0 10px;
+    }
+
+    /* ── MINI FLOW ──────────────────────────────────────────── */
+    .flow {
+      color: #8EE05C;
+      font-weight: 600;
+    }
+
+    /* ── OATH BOX ───────────────────────────────────────────── */
+    .oath-box {
+      border-left: 3px solid #8EE05C;
+      padding: 16px 20px;
+      margin: 16px 0;
+      background: #0a0a0a;
+      font-style: italic;
+      color: #ddd;
+      line-height: 1.8;
+    }
+
+/* ── PREAMBLE ───────────────────────────────────────────── */
+    .preamble {
+      color: #ccc;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid #222;
+      margin: 48px 0;
+    }
+
+    /* ── PRINT ──────────────────────────────────────────────── */
+    @media print {
+      body { background: #000; color: #fff; }
+      .page { padding: 40px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- COVER PAGE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="cover">
+  <img src="D:/GIF LAND/BALLROOM/ballroom_logo.png" alt="Ballroom Logo" style="max-width:520px;width:90%;"/>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- TITLE PAGE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="title-page">
+  <h1>COHOST DIRECTIVES</h1>
+  <div class="subtitle">Operational Constitution<br>Amended Date: 2026-03-20</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- MAIN CONTENT -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="page">
+
+  <!-- ─── PREAMBLE ───────────────────────────────────────────── -->
+  <h2 class="article">The Cohost Directives — A Constitutional Format</h2>
+
+  <p style="margin-bottom:12px;color:#aaa;"><strong>Notation:</strong> L = Line (used for rule/reference numbering)</p>
+
+  <h3 style="color:#8EE05C;margin:24px 0 12px;">Preamble</h3>
+  <p class="preamble">
+    We, the staff and cohosts of the Ballroom, establish these directives to maintain a safe, fun, and flowing environment.
+    All cohosts, moderators, and management members are bound by these rules, laws, and procedures to ensure
+    accountability, fairness, and continuity.
+  </p>
+  <p class="preamble">
+    This document serves as a complete training and reference guide — covering standard operations, edge-case procedures,
+    escalation paths, multi-pin management, last-page behavior, guest interactions, and staff responsibilities.
+    Rules are identified by line number (L) for easy lookup and citation.
+  </p>
+
+  <!-- ─── ARTICLE I ──────────────────────────────────────────── -->
+  <h2 class="article">Article I — Purpose</h2>
+
+  <p class="law"><span class="law-id">Section 1.1:</span> Onboard and train new cohosts with complete examples and operational flows.</p>
+  <p class="law"><span class="law-id">Section 1.2:</span> Serve as a searchable, indexed reference for all staff operations, community culture, common failure points, and best practices.</p>
+
+  <!-- ─── ARTICLE II ─────────────────────────────────────────── -->
+  <h2 class="article">Article II — Ballroom Room Rules (Public Law)</h2>
+  <p style="margin-bottom:16px;">These are the core room rules that apply to <strong>all guests, regulars, and staff</strong> inside the Ballroom.</p>
+
+  <p class="section-group">### Participation &amp; Camera</p>
+
+  <p class="law"><span class="law-id">L2.1:</span> All participants must remain <strong>on camera at all times.</strong></p>
+  <p class="law"><span class="law-id">L2.2:</span> Owners are expected to remain on camera <strong>approximately 75% or more of the time.</strong></p>
+  <p class="law"><span class="law-id">L2.3:</span> Cameras that are <strong>dark, frozen, sleeping, or inactive</strong> may be sent to the waiting room.</p>
+  <p class="law"><span class="law-id">L2.4:</span> Cohosts have authority to waitroom any camera they determine is <strong>non-compliant or potentially disruptive.</strong></p>
+  <p class="law"><span class="law-id">L2.5:</span> Cohosts may also waitroom cameras they believe could be involved in <strong>spam, scams, bot activity, or chaos creation.</strong></p>
+
+  <p class="section-group">### Names &amp; Chat Conduct</p>
+
+  <p class="law"><span class="law-id">L2.6:</span> No <strong>cashtags, payment handles, or promotional text</strong> may appear in names or chat.</p>
+  <p class="law"><span class="law-id">L2.7:</span> No <strong>links or personal contact information</strong> may be shared in the public chat.</p>
+  <p class="law"><span class="law-id">L2.8:</span> Display names must remain <strong>non-disruptive and readable.</strong></p>
+
+  <p class="section-group">### Conduct</p>
+
+  <p class="law"><span class="law-id">L2.9:</span> All guest behavior is subject to correction at any time. Cohosts may address, redirect, warn, or act on any guest's conduct — including but not limited to <strong>bullying, harassment, or targeted behavior</strong> toward others.</p>
+  <p class="law"><span class="law-id">L2.10:</span> No <strong>politics or world news discussions</strong> in the room.</p>
+  <p class="law"><span class="law-id">L2.11:</span> No <strong>posturing, fixation, or repeated unwanted attention</strong> directed toward another guest.</p>
+  <p class="law"><span class="law-id">L2.12:</span> If someone expresses disinterest, continued attempts at interaction may be treated as <strong>harassment.</strong></p>
+  <p class="law"><span class="law-id">L2.13:</span> Adults only. Guests are expected to <strong>act accordingly.</strong></p>
+
+  <p class="section-group">### Moderation</p>
+
+  <p class="law"><span class="law-id">L2.14:</span> Cohosts may <strong>delete negative or disruptive chat messages</strong> before escalation occurs.</p>
+  <p class="law"><span class="law-id">L2.15:</span> Warnings and counseling must <strong>always occur privately,</strong> never publicly.</p>
+  <p class="law"><span class="law-id">L2.16:</span> Cohosts may <strong>remove or waitroom disruptive participants</strong> when necessary to protect the room.</p>
+  <p class="law"><span class="law-id">L2.17 (Owner Exemption):</span> Owners are exempt from all cohost rules and may act at full discretion.</p>
+  <p class="law"><span class="law-id">L2.18 (Suspicious Content Rule):</span> If a message looks out of place, unnatural, or suspicious — <strong>delete it immediately.</strong></p>
+  <p class="law"><span class="law-id">L2.19 (Auto-Delete Rule):</span> Always delete messages from flagged or known disruptive users (e.g., Celestians, Outcasts).</p>
+  <p class="law"><span class="law-id">L2.20 (Length &amp; Quality Filter):</span> Messages that are <strong>4 sentences or longer</strong> and are not engaging, sexy, funny, or casual small talk should be deleted.</p>
+  <p class="law"><span class="law-id">L2.21 (Rudeness Filter):</span> Delete rude, unnecessary, or tension-creating comments immediately — before escalation occurs.</p>
+  <p class="law"><span class="law-id">L2.22 (Default Action Rule):</span> If unsure whether a message belongs, <strong>delete first and assess later.</strong></p>
+
+  <!-- ─── ARTICLE III ────────────────────────────────────────── -->
+  <h2 class="article">Article III — Chapters of the Constitution</h2>
+
+  <!-- CHAPTER 1 -->
+  <h3 class="chapter">Chapter 1 — Lights, Camera, Satisfaction</h3>
+  <p class="index-subtitle">Index Subtitle: Understanding Camera Visibility</p>
+
+  <p class="law"><span class="law-id">L1.1 (Room Law):</span> Everyone must be on camera at all times — except owners, who should be on camera 75%+ of the time.</p>
+  <p class="law"><span class="law-id">L1.2 (Mini Flow):</span> <span class="flow">Verify camera → Check activity → Warn privately → Waitroom if inactive → Document.</span></p>
+  <p class="law"><span class="law-id">L1.3 (Evidence Path):</span> Screenshots, timestamped logs, participant tiles.</p>
+  <p class="law"><span class="law-id">L1.4 (What We Cannot Control):</span> Guest hardware failures, network issues, personal choices.</p>
+  <p class="law"><span class="law-id">L1.5 (Common Tricks / Failure Modes):</span> Virtual backgrounds used to obscure presence, intentional cam toggling, misaligned angles.</p>
+  <p class="law"><span class="law-id">L1.6 (Additional Guidance):</span> Guests experiencing lag should try connecting via VPN set to Japan, Sweden, or Canada.</p>
+  <p class="law"><span class="law-id">L1.7 (Guest Responsibility):</span> Guests are responsible for their own camera functionality. Staff may assist once, via private chat.</p>
+
+  <!-- CHAPTER 2 -->
+  <h3 class="chapter">Chapter 2 — Hand Raises, Multi-Pin, and Last Page</h3>
+  <p class="index-subtitle">Index Subtitle: Hand Raises, Multi-Pin Assignment, and Tile Behavior</p>
+
+  <p class="law"><span class="law-id">L2.1:</span> Multi-pin is a staff-controlled tool. Guests may signal their interest but cannot control it directly.</p>
+  <p class="law"><span class="law-id">L2.2 (Mini Flow):</span> <span class="flow">Observe signal → Confirm intention → Assign multi-pin → Track activity.</span></p>
+  <p class="law"><span class="law-id">L2.3:</span> Guests without an "Allow to multi-pin" option visible are on mobile devices and cannot multi-pin.</p>
+  <p class="law"><span class="law-id">L2.4:</span> If the multi-pin bot fails, cohosts handle requests manually and escalate to Star Chat and @owners.</p>
+  <p class="law"><span class="law-id">L2.5 (Evidence):</span> Participant list, multi-pin assignment logs.</p>
+  <p class="law"><span class="law-id">L2.6:</span> Cohosts may waitroom guests who repeatedly raise their hand in an annoying or disruptive manner.</p>
+  <p class="law"><span class="law-id">L2.7:</span> Cohosts may waitroom any camera perceived as non-compliant or suspected of spam/scam/chaos activity.</p>
+  <p class="law"><span class="law-id">L2.8:</span> When a guest turns their camera off and back on, their tile moves to the last page of the grid. Cohosts should observe placement but not escalate unless behavior becomes disruptive.</p>
+  <p class="law"><span class="law-id">L2.9 (What We Cannot Control):</span> Misused platform features, guests who ignore protocol.</p>
+  <p class="law"><span class="law-id">L2.10 (Last Page Explained):</span> When a guest toggles their camera off then on, Zoom moves their tile to the last page of everyone's grid. This is a platform behavior — monitor it but do not escalate unless it becomes a pattern of abuse.</p>
+
+  <!-- CHAPTER 3 -->
+  <h3 class="chapter">Chapter 3 — Last Page of the Circuit</h3>
+  <p class="index-subtitle">Index Subtitle: Off-Camera Breaks and Temporary Absence</p>
+
+  <p class="law"><span class="law-id">L3.1:</span> Camera must remain on at all times. Temporary off-camera is only permitted for genuine emergencies.</p>
+  <p class="law"><span class="law-id">L3.2 (Mini Flow):</span> <span class="flow">Observe → Confirm reason → Allow if justified → Document.</span></p>
+  <p class="law"><span class="law-id">L3.3 (Evidence):</span> Zoom session timeline, camera toggle logs.</p>
+  <p class="law"><span class="law-id">L3.4 (What We Cannot Control):</span> Genuine emergencies or unexpected real-life interruptions.</p>
+
+  <!-- CHAPTER 4 -->
+  <h3 class="chapter">Chapter 4 — Spam, Scam, and Chaos</h3>
+  <p class="index-subtitle">Index Subtitle: Detecting and Removing Malicious Behavior</p>
+
+  <p class="law"><span class="law-id">L4.1:</span> Identify and remove bots, scammers, spammers, and individuals engaging in predatory behavior.</p>
+  <p class="law"><span class="law-id">L4.2 (Mini Flow):</span> <span class="flow">Observe → Verify → Waitroom or remove → Log → Escalate if needed.</span></p>
+  <p class="law"><span class="law-id">L4.3 (Evidence):</span> Screenshots, chat logs, participant records.</p>
+  <p class="law"><span class="law-id">L4.4 (What We Cannot Control):</span> External spam origination, AI-generated messages sent before detection.</p>
+
+  <!-- CHAPTER 5 -->
+  <h3 class="chapter">Chapter 5 — AI and Synthetic Accounts</h3>
+  <p class="index-subtitle">Index Subtitle: Recognizing Bots and Impersonations</p>
+
+  <p class="law"><span class="law-id">L5.1:</span> Remove or waitroom any account suspected of being AI-generated, automated, or impersonating a real person.</p>
+  <p class="law"><span class="law-id">L5.2 (Mini Flow):</span> <span class="flow">Observe anomaly → Confirm suspicion → Take action → Escalate if behavior persists.</span></p>
+  <p class="law"><span class="law-id">L5.3 (Evidence):</span> Chat logs, screenshots, audit history.</p>
+  <p class="law"><span class="law-id">L5.4 (What We Cannot Control):</span> AI-generated or automated content originating outside the room.</p>
+
+  <p class="law"><span class="law-id">L5.5 (Ways to Spot a Bot):</span> The following are red flags that a camera may be automated, fake, or bot-operated:</p>
+  <ul class="law-list">
+    <li><strong>Cropped camera</strong> — the frame is deliberately cut off, hiding the full image or background.</li>
+    <li><strong>Chaturbate logo visible in the cam frame</strong> — a direct indicator the feed is being streamed from another platform, not a live person.</li>
+    <li><strong>Not using multi-pin</strong> — real, engaged guests interact with the room; bots typically do not respond to or use multi-pin features.</li>
+    <li><strong>Not smoking</strong> — in a room where smoking is a core activity, a cam that never participates in it can be a tell.</li>
+    <li><strong>Looks too good to be true</strong> — overly polished, model-quality appearance with no natural movement or expression.</li>
+    <li><strong>Sends a link asking for money</strong> — immediate scam indicator. Delete the message and remove the account.</li>
+    <li><strong>Turns cam off and does not turn it back on</strong> — real guests return. A cam that goes dark and stays dark is likely a bot or bad actor.</li>
+    <li><strong>Multi-pin test</strong> — if still unsure and the guest has multi-pin, remove it and observe. If their screen visibly flashes or their face shows a clear reaction, they are likely real. No reaction may indicate a bot or pre-recorded feed.</li>
+    <li><strong>Messages appear without typing</strong> — if chat messages from the guest appear without any visible typing activity on their end, the messages may be automated or scripted.</li>
+  </ul>
+  <p class="law"><span class="law-id">L5.6:</span> No single indicator is conclusive on its own. Use a combination of signals before taking action. When in doubt, waitroom first and assess.</p>
+
+  <!-- CHAPTER 6 -->
+  <h3 class="chapter">Chapter 6 — Cohost Powers and Responsibilities</h3>
+  <p class="index-subtitle">Index Subtitle: Cohost Abilities, Tools, and Limits</p>
+
+  <p class="law"><span class="law-id">L6.1:</span> All cohost powers must be used responsibly and within the bounds of escalation protocols.</p>
+  <p class="law"><span class="law-id">L6.2 (Mini Flow):</span> <span class="flow">Observe → Use appropriate power → Log → Report if needed.</span></p>
+  <p class="law"><span class="law-id">L6.3 (Evidence):</span> Zoom action logs, participant feedback.</p>
+  <p class="law"><span class="law-id">L6.4 (What We Cannot Control):</span> Platform bugs, actions taken by other cohosts.</p>
+
+  <!-- CHAPTER 7 -->
+  <h3 class="chapter">Chapter 7 — Smoking and Break Protocols</h3>
+  <p class="index-subtitle">Index Subtitle: On-Camera Smoking and Personal Breaks</p>
+
+  <p class="law"><span class="law-id">L7.1:</span> Cameras must remain on at all times. <strong>Off-camera smoking is not permitted.</strong> If smoking occurs, it must be visible on camera and non-disruptive to the room.</p>
+  <p class="law"><span class="law-id">L7.2 (Mini Flow):</span> <span class="flow">Observe behavior → Confirm compliance → Allow if appropriate → Intervene only if disruptive.</span></p>
+  <p class="law"><span class="law-id">L7.3 (Evidence):</span> Session logs, timeline.</p>
+  <p class="law"><span class="law-id">L7.4:</span> Personal habits that disrupt the room environment are subject to correction. Cohosts have full authority to address, redirect, or remove any guest whose behavior — including smoking habits — negatively impacts the room.</p>
+
+  <!-- CHAPTER 8 -->
+  <h3 class="chapter">Chapter 8 — Evidence and Documentation</h3>
+  <p class="index-subtitle">Index Subtitle: Receipts or It Did Not Happen</p>
+
+  <p class="law"><span class="law-id">L8.1:</span> Collect evidence before or during moderation actions whenever possible.</p>
+  <p class="law"><span class="law-id">L8.2 (Mini Flow):</span> <span class="flow">Observe → Capture evidence → Escalate or warn → Store securely.</span></p>
+  <p class="law"><span class="law-id">L8.3 (Evidence Types):</span> Screenshots, chat logs, session history.</p>
+  <p class="law"><span class="law-id">L8.4 (What We Cannot Control):</span> Technical failures, lost data, platform logging gaps.</p>
+
+  <!-- CHAPTER 9 -->
+  <h3 class="chapter">Chapter 9 — Promotion and Staff Mentorship</h3>
+  <p class="index-subtitle">Index Subtitle: Pathways to Higher Responsibility</p>
+
+  <p class="law"><span class="law-id">L9.1:</span> Promotions are earned through consistent performance and conduct — not seniority alone.</p>
+  <p class="law"><span class="law-id">L9.2 (Mini Flow):</span> <span class="flow">Observe → Mentor → Encourage → Evaluate → Document progress.</span></p>
+  <p class="law"><span class="law-id">L9.3 (Evidence):</span> Staff logs, observation notes.</p>
+  <p class="law"><span class="law-id">L9.4 (What We Cannot Control):</span> Individual motivation and personal ambition.</p>
+
+  <!-- CHAPTER 10 -->
+  <h3 class="chapter">Chapter 10 — Platform Limitations</h3>
+  <p class="index-subtitle">Index Subtitle: Zoom Constraints and Technical Failures</p>
+
+  <p class="law"><span class="law-id">L10.1:</span> Guide guests through tech issues when possible, but do not hold up the room attempting to fix every individual's setup.</p>
+  <p class="law"><span class="law-id">L10.2 (Mini Flow):</span> <span class="flow">Observe → Log → Adjust → Continue.</span></p>
+  <p class="law"><span class="law-id">L10.3 (Evidence):</span> System logs, timestamps.</p>
+  <p class="law"><span class="law-id">L10.4 (What We Cannot Control):</span> Software bugs, device limitations, network conditions.</p>
+
+  <!-- CHAPTER 11 -->
+  <h3 class="chapter">Chapter 11 — Conversation Steering</h3>
+  <p class="index-subtitle">Index Subtitle: Keeping the Flow Fun and Respectful</p>
+
+  <p class="law"><span class="law-id">L11.1:</span> Keep topics playful and safe. Avoid politics, world news, and technical troubleshooting in the main chat.</p>
+  <p class="law"><span class="law-id">L11.2 (Mini Flow):</span> <span class="flow">Observe → Redirect naturally → Document if needed.</span></p>
+  <p class="law"><span class="law-id">L11.3 (Evidence):</span> Chat logs, screenshots.</p>
+  <p class="law"><span class="law-id">L11.4 (What We Cannot Control):</span> Guest attitudes, outside distractions, individual sensitivities.</p>
+
+  <!-- CHAPTER 12 -->
+  <h3 class="chapter">Chapter 12 — The Waiting Room Doctrine</h3>
+  <p class="index-subtitle">Index Subtitle: Security, Staging, and Containment</p>
+
+  <p class="law"><span class="law-id">L12.1:</span> The Waiting Room is a <strong>security feature and operational tool</strong> — not a default punishment.</p>
+  <p class="law"><span class="law-id">L12.2 (Use Cases):</span> Sleeper cams, off cams, dark cams, suspected spam or scam activity, disruptive behavior.</p>
+  <p class="law"><span class="law-id">L12.3 (Mini Flow):</span> <span class="flow">Identify issue → Waitroom → Notify in Host Chat → Monitor → Decide: admit, hold, or remove.</span></p>
+  <p class="law"><span class="law-id">L12.4 (Coordination):</span> The cohost who waitrooms a guest <strong>must notify other cohosts in Host Chat</strong> so the situation is tracked and consistent.</p>
+  <p class="law"><span class="law-id">L12.5:</span> If a guest was placed in the waiting room by mistake, admit them immediately. Do not re-admit known or repeatedly removed trolls — repeated cycling increases disruption and rewards bad behavior.</p>
+  <p class="law"><span class="law-id">L12.6 (Spam Attack Protocol):</span> If the room is under a spam attack: <strong>mass waitroom → stabilize the room → selectively re-admit</strong> known good participants.</p>
+  <p class="law"><span class="law-id">L12.7 (Evidence):</span> Entry logs, chat logs, screenshots.</p>
+  <p class="law"><span class="law-id">L12.8 (What We Cannot Control):</span> Rejoins using new names or devices, external coordination between bad actors.</p>
+
+  <!-- CHAPTER 13 -->
+  <h3 class="chapter">Chapter 13 — Chat Moderation Playbook</h3>
+  <p class="index-subtitle">Index Subtitle: Preventing Escalation Before It Starts</p>
+
+  <p class="law"><span class="law-id">L13.1:</span> If a message is <strong>negative, singles someone out, or is a complaint</strong> — delete it immediately before it escalates.</p>
+  <p class="law"><span class="law-id">L13.2:</span> Always <strong>warn and counsel in private.</strong> Never correct guests publicly in the chat.</p>
+  <p class="law"><span class="law-id">L13.3 (No Response is a Response):</span> Repeated messaging to someone who is not replying (2–3 attempts) may constitute harassment.</p>
+  <p class="law"><span class="law-id">L13.4 (Boundary Rule):</span> If it is not a clear "yes," treat it as a no. Continued pursuit after someone expresses disinterest equals harassment.</p>
+  <p class="law"><span class="law-id">L13.5 (Mini Flow):</span> <span class="flow">Detect problematic message → Delete → Private DM to the guest → Monitor → Escalate if repeated.</span></p>
+  <p class="law"><span class="law-id">L13.6 (Examples):</span></p>
+  <ul class="law-list">
+    <li>"What's wrong with your face?" → Delete immediately + send private warning.</li>
+    <li>Repeatedly tagging a guest who is ignoring them → Warn → Waitroom if the behavior continues.</li>
+  </ul>
+  <p class="law"><span class="law-id">L13.7 (Tone Guidance):</span> What sounds caring can read as hostile in text. Avoid any comments about facial expressions, appearance, or personal attributes.</p>
+  <p class="law"><span class="law-id">L13.8 (Evidence):</span> Chat logs, screenshots, timestamps.</p>
+  <p class="law"><span class="law-id">L13.9 (What We Cannot Control):</span> Misinterpretation of tone, private DMs between guests.</p>
+
+  <!-- CHAPTER 14 -->
+  <h3 class="chapter">Chapter 14 — Last Page Constitution</h3>
+  <p class="index-subtitle">Index Subtitle: Movement, Visibility, and Smoking Culture</p>
+
+  <p class="law"><span class="law-id">L14.1:</span> Turning a camera <strong>off then back on</strong> sends the user's tile to the <strong>last page of the grid</strong> for all other participants.</p>
+  <p class="law"><span class="law-id">L14.2:</span> Guests may navigate to the last page for visibility control or as part of the room's smoking culture. This is a <strong>soft-law behavior</strong> — permitted but not an absolute right.</p>
+  <p class="law"><span class="law-id">L14.3 (Cohost Role):</span> Observe patterns. <strong>Do not escalate</strong> unless the toggling becomes disruptive, attention-seeking spam.</p>
+  <p class="law"><span class="law-id">L14.4 (Mini Flow):</span> <span class="flow">Detect toggle → Confirm pattern → Ignore OR warn if abused → Document.</span></p>
+  <p class="law"><span class="law-id">L14.5 (Abuse Cases):</span> Repeated toggling to farm attention, interrupt the room flow, or evade active moderation.</p>
+  <p class="law"><span class="law-id">L14.6:</span> On mobile, hand-raising may be attention-seeking only — mobile guests do not have multi-pin ability.</p>
+  <p class="law"><span class="law-id">L14.7 (What We Cannot Control):</span> Behavior differences across devices, Zoom's internal ordering logic.</p>
+
+  <!-- CHAPTER 15 -->
+  <h3 class="chapter">Chapter 15 — Read the Room or Ruin It</h3>
+  <p class="index-subtitle">Index Subtitle: Social Intelligence and Flow Control</p>
+
+  <p class="law"><span class="law-id">L15.1 (Core Principle):</span> Cohosts are not just moderators. They are <strong>tone setters.</strong></p>
+  <p class="law"><span class="law-id">L15.2:</span> Do not over-moderate. If something is not disruptive, <strong>leave it alone.</strong></p>
+  <p class="law"><span class="law-id">L15.3:</span> Intervene only when behavior:</p>
+  <ul class="law-list">
+    <li>Disrupts the flow of the room</li>
+    <li>Targets or singles out a guest</li>
+    <li>Creates tension or confusion</li>
+  </ul>
+  <p class="law"><span class="law-id">L15.4 (Mini Flow):</span> <span class="flow">Observe → Assess the vibe → Ignore OR redirect → Escalate only if necessary.</span></p>
+  <p class="law"><span class="law-id">L15.5 (Redirection Examples):</span></p>
+  <ul class="law-list">
+    <li>Shift the topic → "Anyone else smoking?"</li>
+    <li>Introduce a light topic → "Who's having a good night?"</li>
+    <li>Pivot away from tension → Use humor or inclusive energy</li>
+  </ul>
+  <p class="law"><span class="law-id">L15.6:</span> Not every problem needs enforcement. Some problems need <strong>diffusion.</strong></p>
+  <p class="law"><span class="law-id">L15.7 (Over-Moderation Rule):</span> Excessive intervention can harm the room more than the original issue itself.</p>
+  <p class="law"><span class="law-id">L15.8:</span> Cohosts should aim to be <strong>present, not overpowering.</strong></p>
+  <p class="law"><span class="law-id">L15.9 (What We Cannot Control):</span> Guest personalities, moods, and external stress they bring into the room.</p>
+
+  <!-- CHAPTER 16 -->
+  <h3 class="chapter">Chapter 16 — Escalation Ladder</h3>
+  <p class="index-subtitle">Index Subtitle: Enforcement Sequence and Authority (Hard Law)</p>
+
+  <p class="law"><span class="law-id">L16.1 (Standard Escalation Flow):</span></p>
+  <ol class="law-list" style="margin-left:32px;list-style:decimal;">
+    <li>Delete the offending message or content</li>
+    <li>Send a private warning to the guest</li>
+    <li>Move to the waiting room</li>
+    <li>Remove from the session</li>
+    <li>Ban — <em>Owner discretion only</em></li>
+  </ol>
+  <p class="law"><span class="law-id">L16.2:</span> Not all steps are required. Cohosts may <strong>skip levels</strong> based on the severity of the situation.</p>
+  <p class="law"><span class="law-id">L16.3:</span> Severe violations (active spam, scams, predatory behavior) warrant <strong>immediate removal</strong> — no warning required.</p>
+  <p class="law"><span class="law-id">L16.4:</span> Warnings must be <strong>private</strong> unless the escalation requires room-wide visibility.</p>
+  <p class="law"><span class="law-id">L16.5:</span> Repeated violations by the same guest should result in faster escalation each time.</p>
+  <p class="law"><span class="law-id">L16.6 (Abuse Guardrail):</span> Escalation powers must <strong>never</strong> be used emotionally, personally, or as retaliation.</p>
+  <p class="law"><span class="law-id">L16.7 (Team Coordination):</span> All major moderation actions should be communicated in <strong>Host Chat</strong> to maintain team awareness.</p>
+  <p class="law"><span class="law-id">L16.8 (Evidence Requirement):</span> If a moderation action is questioned, the cohost must be able to provide a basic justification or supporting receipts.</p>
+  <p class="law"><span class="law-id">L16.9 (What We Cannot Control):</span> Guests rejoining, alternate accounts, and coordination outside the room.</p>
+  <p class="law"><span class="law-id">L16.10 (Post-Removal Documentation):</span> Any time a guest is removed, the cohost who performed the removal must <strong>document the situation in Discord immediately.</strong> Include: who was removed, why, what led to it, and any relevant chat or behavior evidence.</p>
+  <p class="law"><span class="law-id">L16.11 (Re-Entry Instructions):</span> If a removed guest is eligible to return, direct them to re-enter via:<br>
+  &nbsp;&nbsp;• <strong><a href="https://app.zoom.us/wc" style="color:#8EE05C;">https://app.zoom.us/wc</a></strong> — Zoom web client, no app required.<br>
+  &nbsp;&nbsp;• <strong>1132 workaround</strong> — use the 1132 method to re-enter the session if the standard link does not work.</p>
+  <p class="law"><span class="law-id">L16.12 (Staff Removal Consequence):</span> If a <strong>staff member is removed</strong> by another cohost, the cohost responsible is subject to an <strong>automatic timeout from co-hosting privileges</strong> — unless the removal was the result of an active spam attack, an accidental misclick, or another clearly documented extenuating circumstance.</p>
+  <p class="law"><span class="law-id">L16.13 (Accountability Notice):</span> Do not assume that removal actions go undetected. Session reports and time-stamped logs make it straightforward to identify exactly who removed whom and when. <strong>Every action is traceable.</strong> Act accordingly.</p>
+
+  <!-- CHAPTER 17 -->
+  <h3 class="chapter">Chapter 17 — Cohost Identity and Authority</h3>
+  <p class="index-subtitle">Index Subtitle: Team Conduct, Disputes, and Responsibility</p>
+
+  <p class="law"><span class="law-id">L17.1 (Perception Rule):</span> To a guest, a cohost <em>is</em> the host. Cohosts carry full responsibility for the room experience at all times.</p>
+  <p class="law"><span class="law-id">L17.2 (Private Confrontation Rule):</span> Cohosts must <strong>only confront or correct other cohosts in private</strong> — via DM or in the Host Chat. Public contradiction is prohibited.</p>
+  <p class="law"><span class="law-id">L17.3 (Override Clarification):</span> An "override" is any action that reverses or conflicts with another cohost's decision — such as re-admitting a removed guest or undoing a waitroom without coordination.</p>
+  <p class="law"><span class="law-id">L17.4 (Override Protocol):</span> Do not publicly override another cohost. If an override is necessary, coordinate in Host Chat first — or act and immediately document the override in Host Chat.</p>
+  <p class="law"><span class="law-id">L17.5 (Unity Rule):</span> In public view, cohosts always present as a <strong>unified team.</strong> All disagreements are resolved off-stage.</p>
+  <p class="law"><span class="law-id">L17.6 (Authority Without Ego):</span> Cohost powers exist for <strong>room stability</strong> — not personal preference, ego, or favoritism.</p>
+  <p class="law"><span class="law-id">L17.7 (Disruption Standard):</span> Any staff behavior that disrupts the peace and tranquility of the room is subject to corrective action.</p>
+  <p class="law"><span class="law-id">L17.8 (Corrective Actions):</span> Depending on severity:</p>
+  <ul class="law-list">
+    <li>Private warning or counseling</li>
+    <li>Suspension of cohost privileges</li>
+    <li>Immediate demotion — at Owner discretion</li>
+  </ul>
+  <p class="law"><span class="law-id">L17.9 (Escalation for Staff Issues):</span> If a cohost's behavior is ongoing or severe, escalate to Admins or Owners with supporting receipts.</p>
+  <p class="law"><span class="law-id">L17.10 (Abuse Guardrail):</span> No targeting, cliques, or coordinated staff action against a guest or fellow cohost.</p>
+  <p class="law"><span class="law-id">L17.11 (What We Cannot Control):</span> Personality differences, interpretation of tone, external relationships between staff members.</p>
+
+  <!-- CHAPTER 18 -->
+  <h3 class="chapter">Chapter 18 — Topics and Energy Control</h3>
+  <p class="index-subtitle">Index Subtitle: Steering Conversation Without Alienating Guests</p>
+
+  <p class="law"><span class="law-id">L18.1 (Core Principle):</span> Cohosts should <strong>actively steer conversation</strong> while keeping all guests feeling comfortable and included.</p>
+  <p class="law"><span class="law-id">L18.2 (Vibe Protection Rule):</span> If a topic kills the vibe, creates tension, or derails the room's flow — <strong>redirect immediately.</strong></p>
+  <p class="law"><span class="law-id">L18.3 (Topics to Avoid):</span></p>
+  <ul class="law-list">
+    <li>Politics</li>
+    <li>World news</li>
+    <li>Hysteria-driven or doom-scroll discussions</li>
+    <li>Technical troubleshooting in the main room</li>
+  </ul>
+  <p class="law"><span class="law-id">L18.4 (Topics to Advance):</span></p>
+  <ul class="law-list">
+    <li>Smoking culture and relaxed social activity</li>
+    <li>Attraction, hot guests, and light flirting</li>
+    <li>Fun, engaging, and light-hearted topics</li>
+    <li>Friendly conversation and genuine connection</li>
+    <li>Community building and returning member recognition</li>
+  </ul>
+  <p class="law"><span class="law-id">L18.5 (Redirection Method):</span> Do not shut people down harshly. Instead:</p>
+  <ul class="law-list">
+    <li>Pivot the topic naturally</li>
+    <li>Ask an inclusive question to the room</li>
+    <li>Introduce lighter, warmer energy</li>
+  </ul>
+  <p class="law"><span class="law-id">L18.6 (Examples):</span></p>
+  <ul class="law-list">
+    <li>"Let's not go there" → Avoid — too blunt and can feel dismissive</li>
+    <li>"Ok but who's having a better night than me right now?" → Preferred</li>
+    <li>"Anyone else smoking?" → Natural reset, inclusive, effective</li>
+  </ul>
+  <p class="law"><span class="law-id">L18.7 (No Mean-Girls Rule):</span> Steering conversation must never feel like exclusion, mockery, or clique behavior toward any guest.</p>
+  <p class="law"><span class="law-id">L18.8 (Mini Flow):</span> <span class="flow">Detect bad topic → Redirect smoothly → Reinforce the new topic → Monitor room energy.</span></p>
+  <p class="law"><span class="law-id">L18.9 (What We Cannot Control):</span> Guest interests, outside emotions, individual sensitivities.</p>
+  <p class="law"><span class="law-id">L18.10 (Exit Line Rule):</span> Discourage public exit announcements such as <em>"ok got to go"</em> or <em>"I'm leaving."</em> Not all guests understand that one person leaving does not mean the room is closing — these messages can trigger a mass exodus based on confusion alone. If a guest must say goodbye, a quiet private message is preferred. Cohosts should delete public exit announcements and gently advise the guest in private.</p>
+
+  <!-- CHAPTER 19 -->
+  <h3 class="chapter">Chapter 19 — The Effortless Room Standard</h3>
+  <p class="index-subtitle">Index Subtitle: Invisible Moderation and Natural Flow</p>
+
+  <p class="law"><span class="law-id">L19.1 (Core Standard):</span> The room should feel <strong>effortless</strong> — even when it is being heavily moderated behind the scenes.</p>
+  <p class="law"><span class="law-id">L19.2:</span> Guests should never feel controlled, corrected, or managed. Moderation must feel <strong>natural and invisible.</strong></p>
+  <p class="law"><span class="law-id">L19.3 (Engagement Expectation):</span> Cohosts are encouraged to engage with the room, but are not required to if it does not fit their personality or role.</p>
+  <p class="law"><span class="law-id">L19.4:</span> Silent cohosts are acceptable as long as they are <strong>actively observing and maintaining</strong> the room.</p>
+  <p class="law"><span class="law-id">L19.5 (Presence Rule):</span> Whether active or quiet, cohosts must remain <strong>aware, responsive, and aligned with the room's energy.</strong></p>
+  <p class="law"><span class="law-id">L19.6 (Execution Principle):</span> The best moderation is often <strong>unnoticed.</strong> If guests can feel the system working, it is being over-applied.</p>
+  <p class="law"><span class="law-id">L19.7 (Balance Rule):</span> Maintain balance between:</p>
+  <ul class="law-list">
+    <li>Control and freedom</li>
+    <li>Structure and spontaneity</li>
+    <li>Moderation and natural social flow</li>
+  </ul>
+  <p class="law"><span class="law-id">L19.8 (Failure Mode):</span> If the room feels tense, overly corrected, or artificial — <strong>reduce visible intervention immediately.</strong></p>
+  <p class="law"><span class="law-id">L19.9 (Mini Flow):</span> <span class="flow">Observe → Act subtly → Blend into the flow → Reassess room energy.</span></p>
+  <p class="law"><span class="law-id">L19.10 (What We Cannot Control):</span> Individual perception of control, guest sensitivity, external mood factors.</p>
+
+  <!-- CHAPTER 20 -->
+  <h3 class="chapter">Chapter 20 — First 5 Minutes Protocol</h3>
+  <p class="index-subtitle">Index Subtitle: Entry, Assessment, and Immediate Impact</p>
+
+  <p class="law"><span class="law-id">L20.1 (Priority Rule):</span> Upon entering the room, cohosts must <strong>first assess room stability</strong> before engaging socially.</p>
+  <p class="law"><span class="law-id">L20.2 (Step 1 — Initial Scan):</span> Immediately check for:</p>
+  <ul class="law-list">
+    <li>Active spam or scam activity</li>
+    <li>Unusual behavior or chaos in progress</li>
+    <li>Large numbers of raised hands (e.g., 50+)</li>
+    <li>Suspicious activity on the last page</li>
+  </ul>
+  <p class="law"><span class="law-id">L20.3 (Context Awareness):</span> Look for signs that an issue already occurred before your arrival:</p>
+  <ul class="law-list">
+    <li>Chat irregularities or deleted-message gaps</li>
+    <li>Disrupted or chaotic flow</li>
+    <li>Multiple raised hands simultaneously</li>
+    <li>Guests reacting to something that is no longer visible</li>
+  </ul>
+  <p class="law"><span class="law-id">L20.4 (Step 2 — Promotion):</span> Once stability is confirmed, grab the room number and send out a promo.</p>
+  <p class="law"><span class="law-id">L20.5 (Step 3 — Camera Sweep):</span> Perform an unannounced front-to-back camera sweep to identify:</p>
+  <ul class="law-list">
+    <li>Off cameras</li>
+    <li>Dark or frozen cameras</li>
+    <li>Suspicious or non-compliant camera setups</li>
+  </ul>
+  <p class="law"><span class="law-id">L20.6 (Step 4 — Engagement):</span> Once the moderation baseline is set:</p>
+  <ul class="law-list">
+    <li>Join the conversation naturally</li>
+    <li>Ask if anyone wants to smoke, dose, or engage</li>
+    <li>Introduce positive energy without forcing it</li>
+  </ul>
+  <p class="law"><span class="law-id">L20.7 (Step 5 — Maintain Flow):</span> Transition into <strong>relaxed moderation</strong> while participating socially as a full member of the room.</p>
+  <p class="law"><span class="law-id">L20.8 (Core Principle):</span> Fun is not optional. Cohosts should <strong>prioritize enjoyment and positive energy</strong> — not just enforcement.</p>
+  <p class="law"><span class="law-id">L20.9 (Mini Flow):</span> <span class="flow">Scan → Stabilize → Promote → Sweep → Engage → Maintain → Enjoy.</span></p>
+  <p class="law"><span class="law-id">L20.10 (What We Cannot Control):</span> Room state before arrival, existing dynamics, prior moderation decisions.</p>
+
+  <!-- CHAPTER 21 -->
+  <h3 class="chapter">Chapter 21 — Cohost Oath and Acknowledgment</h3>
+  <p class="index-subtitle">Index Subtitle: Entry Agreement and Accountability</p>
+
+  <p class="law"><span class="law-id">L21.1 (Oath Requirement):</span> All cohosts must read and acknowledge this document <strong>before</strong> receiving or retaining cohost privileges.</p>
+
+  <p class="law"><span class="law-id">L21.2 (Cohost Oath):</span></p>
+  <div class="oath-box">
+    "I understand that as a cohost, I represent the room at all times. I will protect the flow, the guests, and the environment.
+    I will act without ego, avoid public conflict, and follow private escalation procedures. I will prioritize fun, stability,
+    and respect above all else. I accept that my role can be changed or removed at any time at owner discretion."
+  </div>
+
+  <p class="law"><span class="law-id">L21.3 (No Strike System):</span> Enforcement for cohosts is <strong>fully discretionary.</strong> There are no guaranteed warnings or free passes.</p>
+  <p class="law"><span class="law-id">L21.4 (Acknowledgment Method):</span> Cohosts must provide a clear acknowledgment — via checkbox, direct message, or role acceptance — prior to activation.</p>
+  <p class="law"><span class="law-id">L21.5 (Ongoing Consent):</span> Continued use of cohost privileges implies <strong>ongoing agreement</strong> to this doctrine in full.</p>
+
+  <!-- CHAPTER 22 -->
+  <h3 class="chapter">Chapter 22 — DJ Protocols and Music Sessions</h3>
+  <p class="index-subtitle">Index Subtitle: DJ Permissions, Frequency Limits, and Rank-Based Access</p>
+
+  <p class="law"><span class="law-id">L22.1 (Permission Rule):</span> <strong>Permission is required to DJ.</strong> No guest may begin a DJ session without explicit approval from a cohost or owner.</p>
+  <p class="law"><span class="law-id">L22.2 (Standard Guests):</span> Standard guests <strong>may not DJ.</strong> No exceptions without owner authorization.</p>
+  <p class="law"><span class="law-id">L22.3 (Stars):</span> Members at <strong>STAR</strong> rank may DJ <strong>once per week.</strong> Permission is required for each session.</p>
+  <p class="law"><span class="law-id">L22.4 (Statements):</span> Members at <strong>STATEMENT</strong> rank may DJ up to <strong>3 times per week.</strong> Permission is required for each session.</p>
+  <p class="law"><span class="law-id">L22.5 (Legends):</span> <strong>LEGENDS</strong> may DJ an unlimited number of times with no weekly cap. Permission is still required.</p>
+  <p class="law"><span class="law-id">L22.6 (Legend Computer Sound Rule):</span> After a Legend completes their <strong>3rd DJ session</strong>, all sessions beyond that must be conducted using <strong>computer sound share only</strong> — not microphone audio. This limits attention-seeking behavior and keeps the focus on the music and the community rather than the individual.</p>
+  <p class="law"><span class="law-id">L22.7 (Enforcement):</span> Cohosts are responsible for tracking session counts and enforcing rank-based limits. If a guest exceeds their limit or begins DJing without permission, intervene immediately — mute, waitroom, or remove as appropriate.</p>
+  <p class="law"><span class="law-id">L22.8 (What We Cannot Control):</span> Guests misrepresenting their rank or session count. When in doubt, confirm with an owner before allowing a session.</p>
+
+  <hr class="divider"/>
+
+  <!-- SIGNATURE SECTION -->
+  <h2 class="article" style="text-align:center;margin-top:60px;">Cohost Acknowledgment &amp; Signature</h2>
+  <p style="color:#aaa;text-align:center;margin-bottom:32px;font-size:13px;">By signing below, you confirm that you have read, understood, and agree to abide by all rules, laws, and procedures outlined in the Ballroom Cohost Directives.</p>
+
+  <div style="max-width:640px;margin:0 auto;">
+    <iframe src="https://forms.gle/Seg58qr27zDSukyG9" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" style="border:1px solid #333;background:#fff;">Loading…</iframe>
+    <p style="text-align:center;margin-top:12px;font-size:12px;color:#555;">Having trouble? <a href="https://forms.gle/Seg58qr27zDSukyG9" target="_blank" style="color:#8EE05C;">Open form in a new tab</a></p>
+  </div>
+
+  <hr class="divider"/>
+
+  <p style="color:#555;font-size:12px;font-style:italic;text-align:center;">
+    This document covers: Waiting Room Doctrine · Chat Moderation Playbook · Last Page Operational Guide ·
+    Cohost Authority · Topic Control · Effortless Room Standard · First 5 Minutes Protocol · Cohost Oath.
+    It constitutes the complete deployable training and governance system for the Ballroom.
+  </p>
+
+</div>
+
+<!-- WATERMARK -->
+<img src="D:/GIF LAND/BALLROOM/ballroom_logo.png" alt="" class="watermark"/>
+
+</body>
+</html>
