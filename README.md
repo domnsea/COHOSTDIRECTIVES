@@ -1,2 +1,2 @@
 # COHOSTDIRECTIVES
-THESE ARE THE DIRECTIVES FOR EDUCATION PURPOSES AS WELL AS HOLDING EVERYONE TO THE SAME STANDARD.
+-- These directives are meant to educate, clarify expectations, and hold all individuals to the same standard.
